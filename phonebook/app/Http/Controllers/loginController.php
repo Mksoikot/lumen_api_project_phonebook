@@ -24,7 +24,7 @@ class loginController extends Controller
             "site" => "http://demo.com",
             "user" => $username,
             "iat" => time(),
-            "exp" => time()+120
+            "exp" => time()+3600
         );
         $jwt = JWT::encode($payload, $key, 'HS256');
 
